@@ -81,7 +81,7 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> nano is my preferred terminal editor because it is the one I am most familiar with. 
 
 --
 
@@ -89,6 +89,7 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I am most familiar using TextWrangler and Brackets. TextWrangler is simple and easy to use and Brackets is visually appealing and allows you to have files open in multiple panes at the same time. Cmd - / to comment and uncomment is pretty universal among editors and, along with cmd - [ and cmd - ] to indent and remove indents, a shortcut I use constantly. Brackets has a settings file you can edit to customize the editor. I'm most concerned with customizing visual appearances in the editor because I'll be looking at it for hours on end.  
+I'll be interested to try out Rodeo because I haven't done much with Python using an IDE, so I'll be curious to see if I like it.
 
  

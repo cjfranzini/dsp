@@ -60,16 +60,16 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
     x = []  
     for n in range(1,6):  
         x.append(n**2)   
-    ```  
+```  
 >> ```python  
     # using list comprehension
     x = [n**2 for n in range(1,6)]
-    ```  
+```  
 >> The above list can also be constructed using `map` if `n` is already defined.  
 >> ```python
     n = range(1,6)  
     x = map(lambda y: y**2, n)  
-    ```  
+```  
 >> Again, the list comprehension is more succinct.  
     
 >> A list comprehension can also be used in place of `filter`.  
@@ -77,22 +77,22 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
     # using filter
     n = range(1,10)  
     y = filter(lambda x: x % 3 == 0, n)
-    ```  
+```  
 >> ```python  
     # using list comprehension
     y = [x for x in range(1,10) if x % 3 == 0]  
-    ```  
+```  
 >> A list comprehension can replace `map` or `filter` in instances when `for` or `if` statements are all that is required to construct the list. For anything more complicated `map` or `filter` should be used. A list comprehension should also not be used when the argument for constructing the list changes in time.  
 
 >> A set comprehension is constructed similarly to a list comprehension except that it is bounded by braces.  
 >> ```python
     s = {float(x) / (x**2) for x in range(1,10)}  
-    ```  
+```  
     
 >> The same set can be constructed using a dictionary comprehension with initial values of `x` as the keys.  
 >> ```python
     d = {x: float(x) / (x**2) for x in range(1,10)}  
-    ```
+```
 
 
 ---

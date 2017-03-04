@@ -18,8 +18,17 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    
+    if count >= 10:
+        return 'Number of donuts: many'
+    else:
+        return 'Number of donuts: %s' % count
+    
+#    raise NotImplementedError
 
+#tests = [4,9,10,99]
+#
+#print [donuts(test) for test in tests]
 
 def both_ends(s):
     """
@@ -37,7 +46,22 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    
+    if len(s) < 2:
+        return ''
+    else:
+        start = s[:2]
+        end = s[-2:]
+        return start + end
+    
+#    raise NotImplementedError
+
+#tests = ['spring',
+#        'Hello',
+#        'a',
+#        'xyz']
+
+#print [both_ends(test) for test in tests]
 
 
 def fix_start(s):
@@ -56,7 +80,22 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    first = s[0]
+    out = ''
+    
+    for i in range(len(s)):
+        if (s[i] == first) & (i != 0):
+            out += '*'
+        else:
+            out += s[i]
+            
+    return out
+    
+#    raise NotImplementedError
+
+#tests = ['babble','aardvark','google','donut']
+#
+#print [fix_start(test) for test in tests]
 
 
 def mix_up(a, b):
@@ -74,7 +113,17 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    first = b[:2] + a[2:]
+    second = a[:2] + b[2:]
+    
+    return '%s %s' % (first, second)
+    
+#    raise NotImplementedError
+
+#print mix_up('mix','pod')
+#print mix_up('dog','dinner')
+#print mix_up('gnash','sport')
+#print mix_up('pezzy','firm')
 
 
 def verbing(s):
@@ -91,8 +140,20 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    
+    if len(s) < 3:
+        return s
+    else:
+        if s[-3:] == 'ing':
+            return s + 'ly'
+        else:
+            return s + 'ing'
+    
+#    raise NotImplementedError
 
+#tests = ['hail','swiming','do']
+#
+#print [verbing(test) for test in tests]
 
 def not_bad(s):
     """
@@ -111,7 +172,26 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    
+    not_i = s.find('not')
+    bad_i = s.find('bad')
+    
+    if (not_i == -1) or (bad_i == -1):
+        return s
+    elif not_i > bad_i:
+        return s
+    else:
+        out = s[:not_i] + 'good' + s[(bad_i + 3):]
+        return out
+    
+#    raise NotImplementedError
+
+#tests = ['This movie is not so bad',
+#        'This dinner is not that bad!',
+#        'This tea is not hot',
+#        "It's bad yet not"]
+#
+#print [not_bad(test) for test in tests]
 
 
 def front_back(a, b):
@@ -130,4 +210,20 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    
+    a_mid = (len(a) + 1) / 2
+    b_mid = (len(b) + 1) / 2
+    
+    a_front = a[:a_mid]
+    b_front = b[:b_mid]
+    
+    a_back = a[a_mid:]
+    b_back = b[b_mid:]
+    
+    return a_front + b_front + a_back + b_back
+    
+#    raise NotImplementedError
+
+#print front_back('abcd', 'xy')
+#print front_back('abcde', 'xyz')
+#print front_back('Kitten', 'Donut')

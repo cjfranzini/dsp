@@ -15,8 +15,20 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    n = 0
+    
+    for s in words:
+        if (len(s) > 1) and (s[0] == s[-1]):
+            n += 1
+    
+    return n
+#    raise NotImplementedError
 
+#tests = [['aba', 'xyz', 'aa', 'x', 'bbb'],
+#        ['', 'x', 'xy', 'xyx', 'xx'],
+#        ['aaa', 'be', 'abc', 'hello']]
+#
+#print [match_ends(test) for test in tests]
 
 def front_x(words):
     """
@@ -32,8 +44,25 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    
+    x = []
+    not_x = []
+    
+    for s in words:
+        if s[0] == 'x':
+            x.append(s)
+        else:
+            not_x.append(s)
+            
+    return sorted(x) + sorted(not_x)
+    
+#    raise NotImplementedError
 
+#tests = [['bbb', 'ccc', 'axx', 'xzz', 'xaa'],
+#        ['ccc', 'bbb', 'aaa', 'xcc', 'xaa'],
+#        ['mix', 'xyz', 'apple', 'xanadu', 'aardvark']]
+#
+#print [front_x(test) for test in tests]
 
 def sort_last(tuples):
     """
@@ -49,8 +78,23 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    
+    rev = []
+    out = []
+    
+    for t in tuples:
+        rev.append(t[::-1])
+    
+    for r in sorted(rev):
+        out.append(r[::-1])
+        
+    return out
+    
+#    raise NotImplementedError
 
+#print sort_last([(1, 3), (3, 2), (2, 1)])
+#print sort_last([(2, 3), (1, 2), (3, 1)])
+#print sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
 
 def remove_adjacent(nums):
     """
@@ -68,7 +112,25 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    
+    out = []
+    prev = None
+    
+    for n in nums:
+        if n != prev:
+            out.append(n)
+        prev = n
+            
+    return out
+    
+#    raise NotImplementedError
+
+#tests = [[1, 2, 2, 3],
+#        [2, 2, 3, 3, 3],
+#        [3, 2, 3, 3, 3],
+#        []]
+#
+#print [remove_adjacent(test) for test in tests]
 
 
 def linear_merge(list1, list2):
@@ -85,4 +147,12 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    
+    return sorted(list1 + list2)
+    
+#    raise NotImplementedError
+
+#print linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc'])
+#print linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz'])
+#print linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
+

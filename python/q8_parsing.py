@@ -21,7 +21,7 @@ def smallest_goal_difference():
 
         for row in reader:
             diff = int(row['Goals']) - int(row['Goals Allowed'])  
-            diff = abs(diff) # absolute difference
+            diff = abs(diff) # absolute difference, comment for 'most-negative' difference ('Leicester', -34)
 
             if diff < smallest_diff:
                 smallest_diff = diff

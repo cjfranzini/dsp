@@ -83,8 +83,22 @@ This is a classic example of hypothesis testing using the normal distribution.  
 Bayes' Theorem is an important tool in understanding what we really know, given evidence of other information we have, in a quantitative way.  It helps incorporate conditional probabilities into our conclusions.
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
+ 
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> We want to know the probability Elvis is an identical twin given that he had a twin brother who died at birth. Put another way, we want to know the probability Elvis was an identical twin given that he was a twin. In this situation there are two hypotheses: Elvis was an identical twin and Elvis was a fraternal twin. We only care about the first but it will help to compute both. The hypotheses meet Downey's requirements of being both mututually exclusive and collectively exhaustive.    
+
+>> This problem can be solved nicely using the table method described by Downey in chapter one of *Think Bayes*.   
+
+>> The prior probability for each hypothesis (p(H)) is the stated probability observed in the population, so 1/300 for indentical twin and 1/125 for fraternal twin. The likelihood (p(D|H)) is the probability Elvis was a twin given that he was either an idential twin or a fraternal twin, which is one for both. That makes the product (p(H)p(D|H)) easy to compute. The normalizing constant (p(D)) is the sum of the two prior probabilities: 17/1500. Normalizing the products shows p(A|D) to be 5/17 and p(B|D) to be 12/17.
+
+>> 
+>> Hypothesis | p(H) | p(D&#124;H) | p(H)p(D&#124;H) | p(H&#124;D)
+>> ------------ | ------------- | ------------ | ------------- | ------------
+>> A | 1/300 | 1 | 1/300 | 5/17
+>> B | 1/125 | 1 | 1/125 | 12/17
+
+>> Therefore, for this particular population, the probability that Elvis was an identical twin given that he had a twin brother is 5/17.
+
 
 ---
 

@@ -105,7 +105,11 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Frequentist and Bayesian statistics seem to me two different perspectives rather than disparate fields of statistics. In fact, I think treating them as wholly different has made it more difficult for me to understand their differences because I'm not convinced one is better than the other. Nor am I convinced that one should be used exclusively instead of the other. I think it depends on what you want to know. The main difference between the two lies in the definition of probability. Frequentists consider probability an expression of frequency. That is, if a frequentist says the probability of an event is 60% what is meant is that if an observation is made ten times the event will be observed six times. On the other hand, if a Bayesian says the probability of an event is 60% what is meant is that the Bayesian is 60% certain the event will be observed.  
+
+>>In practice, frequentist statistics assert that populations have 'true' parameters that can be approximated from the descriptive statistics of many independent samples of the population. Bayesian statistics rejects the idea that there is any singular truth about a population and instead asserts that the parameter of a population can be any one of a range of values each with its own likelihood. Both allow for either informed or uninformed prior assumptions to affect analysis. In Bayesian statistics it is necessary. In frequentist it is not but it is reasonable to imagine a situation where you might do so. For instance, income distributions are rarely linear so it would be reasonable to make a prior assumption about the non-linearity of a relationship involving income data. Both also depend on repeated observations to improve upon prior assumptions.  
+
+>> Both types of analysis acknowledge uncertainty as the outcome of each is expressed as a range of values. The result of a Bayesian analysis is a range of values each with its own likelihood. The result of a frequentist analysis is a range of values and the likelihood, expressed as the confidence interval, is the expected frequency with which the 'truth' occurs within the range. 
 
 ---
 
